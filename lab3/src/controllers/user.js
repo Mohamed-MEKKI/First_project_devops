@@ -25,11 +25,19 @@ module.exports = {
     })
   },
   get: (username, callback) => {
-    db.hgetall(user.username,userObj,(err, res) => {
-      if (err) return callback(err, null)
-      if (!res) return callback(new Error("User does not exist"), null)
-      else {
-        return user.firstname +" "+ user.lastname
+    // cannot get user when doesn't exist
+    db.exists(username, (err, res) => {
+      if (err) {
+        return callback(err, null);
+      }
+      if (!res) {
+        return callback(new Error('User does not exist'), null);
+      } else {
+        // get user from redis
+        db.hgetall(username, (err, result) => {
+        if (err) return callback(err, null);
+        return callback(null, result);
+        });
       }
     })
   }
