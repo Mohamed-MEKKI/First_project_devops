@@ -21,9 +21,13 @@ userRouter
       resp.status(201).json(respObj)
     })
   })
-  // .get('/:username', (req, resp, next) => { // Express URL params - https://expressjs.com/en/guide/routing.html
-  //   // TODO Create get method API
-  //   const username = req.params.username
+ .get('/:username', (req, resp, next) => { // Express URL params - https://expressjs.com/en/guide/routing.html
+   // TODO Create get method API
+     console.log('the response will be sent by the next function ...')
+  next()
+}, (req, res) => {
+  const username = req.params.username
+  res.send(username)
   // })
   
 module.exports = userRouter
