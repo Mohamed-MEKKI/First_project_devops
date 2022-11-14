@@ -24,3 +24,5 @@ spec:
             name: "http-server"
         volumeMounts:
           # TODO complete
+        - mountPath: /cache
+          name: chache-volume

@@ -15,6 +15,9 @@ spec:
         app: nginx-host-path
     spec:
       volumes:
+      - name: test-volume
+        hostPath:
+          path: /mnt/hostPath/
         # TODO complete
       containers:
       - name: nginx-container
@@ -23,4 +26,6 @@ spec:
           - containerPort: 80
             name: "http-server"
         volumeMounts:
+          - mountPath: /usr/share/nginx/html
+            name: test-volume
           # TODO complete
