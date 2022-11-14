@@ -10,23 +10,22 @@ pip install foobar
 
 ## Usage
 
-```python
-import foobar
 
-# returns 'words'
-foobar.pluralize('word')
+## Summary
+In this course we are going to resolve many labs related to several subjects,like containes,images,APIs.
+#lab1
 
-# returns 'geese'
-foobar.pluralize('goose')
+#lab2
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
+#lab3
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+#lab5
 
-Please make sure to update tests as appropriate.
+#lab6
+
+#lab7
+
+#lab8
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/).
