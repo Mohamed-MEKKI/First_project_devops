@@ -1,10 +1,9 @@
 # Welcome to our repository
 
 
-## Installation
+## We are Mohamed MEKKI & Thanthai Udcharchon
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
+Two students enrolled in I.S gr3
 ```bash
 pip install foobar
 ```
