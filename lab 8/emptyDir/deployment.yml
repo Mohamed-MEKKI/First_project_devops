@@ -15,7 +15,9 @@ spec:
         app: nginx-empty-dir
     spec:
       volumes:
-        # TODO complete
+        - name: cache-volume
+          emptyDir:
+            sizeLimit: 500Mi
       containers:
       - name: nginx-container
         image: nginx
@@ -23,6 +25,5 @@ spec:
           - containerPort: 80
             name: "http-server"
         volumeMounts:
-          # TODO complete
         - mountPath: /cache
           name: chache-volume
